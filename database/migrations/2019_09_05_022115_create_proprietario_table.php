@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateInquilinoTable extends Migration
+class CreateProprietarioTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateInquilinoTable extends Migration
      */
     public function up()
     {
-        Schema::create('inquilino', function (Blueprint $table) {
+        Schema::create('proprietario', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome',50)/**/;
             $table->string('cpf',14)->unique();
@@ -37,6 +37,6 @@ class CreateInquilinoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('inquilino');
+        Schema::dropIfExists('proprietario');
     }
 }
